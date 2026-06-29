@@ -10,8 +10,8 @@ STEPS for deployment
 * clone the github repo to ec2 
 * copy all the files and past to /var/www/html 
 * In security group give port number to access or allow all traffic [0.0.0.0/0]
-* Access through <EC2 public-ip>
+* Access through [ EC2 public-ip ]
 * create a Docker file for the apache application
 * build the docker file [ docker build -t stack:latest . ]
 * Run the docker file [ docker run -d -p 90:80 <container-id> ]
-* access through the <ec2-public-id:90> 
+* access through the [ ec2-public-id:90 ]
