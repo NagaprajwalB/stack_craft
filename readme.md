@@ -18,15 +18,15 @@ sudo apt install apache2
 ```
 # DOCKER INSTALLATION
 sudo apt install docker.io
-sudo usrmod -aG docker $USER
+sudo usrmod -aG docker $USER     # To run commamnds without sudo
 newgrp docker  
 ```
-* clone the github repo to ec2 
-* copy all the files and past to /var/www/html 
+* Clone the github repo to ec2 
+* Copy all the files and past to /var/www/html 
 * In security group give port number to access or allow all traffic [0.0.0.0/0]
 * Access through [ EC2 public-ip ]
-* create a Docker file for the apache application
-* build the docker file 
+* Create a Docker file for the apache application
+* Build the docker file 
 ``` 
 docker build -t stack:latest . 
 ```
@@ -34,4 +34,8 @@ docker build -t stack:latest .
 ``` 
 docker run -d -p 90:80 <container-id> 
 ```
-* access through the [ ec2-public-id:90 ]
+* Intract with docker container 
+```
+docker exec -it <container-id> bash
+```
+* Access through [ ec2-public-id:90 ]
