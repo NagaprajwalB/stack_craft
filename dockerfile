@@ -1,3 +1,3 @@
 FROM httpd:trixie
-copy . .
+COPY . .
 EXPOSE 80
